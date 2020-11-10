@@ -62,12 +62,12 @@ Use the inning function below to do the following:
   For example: invoking inning() should return a numerical score value of 0, 1, or 2
 */
 
-function inScore(){
+function inning(){
     /*Code Here*/
     let newScore = Math.floor(Math.random() * 3);
-    return ;
+    return newScore;
 } 
-console.log("Score during Inning" + inScore);
+console.log("Score during Inning" + inning);
 
 /* Task 3: finalScore()
 Use the finalScore function below to do the following::
@@ -82,11 +82,23 @@ For example: invoking finalScore(inning, 9) might return this object:
 }
 */ 
 
-function finalScore(/*code Here*/){
 
-  /*Code Here*/
 
+
+function finalScore(reUse, amount){
+  let update={
+    "Home": 0,
+    "Away": 0
+    }
+
+    for(let i = 0; i <= amount; i++){
+      update.Home += reUse;
+      update.Away += reUse;
+    }
+    return update;
 }
+
+console.log(finalScore(inning, 9));
 
 /* Task 4: 
 // create a function called getInningScore 
@@ -152,13 +164,13 @@ function foo(){
   console.log('its working');
   return 'bar';
 }
-export default{
-  foo,
-  processFirstItem,
-  counter1,
-  counter2,
-  inning,
-  finalScore,
-  getInningScore,
-  scoreboard,
-}
+// export default{
+//   foo,
+//   processFirstItem,
+//   counter1,
+//   counter2,
+//   inning,
+//   finalScore,
+//   getInningScore,
+//   scoreboard,
+// }

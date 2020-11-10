@@ -43,6 +43,8 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+Answer: Closure is related to scope and parent child relationship.
+
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -64,8 +66,13 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+Answer: Closure is used in const dansRoll and const zoesRoll, both closures. They share the same function body definition, but store different lexical environments. 
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+Answer: A) The value of name will always remain the same B) Everytime we call dansRoll() the value of newRoll "could change"(in reality it is an empty place holder until the function is called and the variable initialized) because its value is set to generate a random number. 
+
 c. What is the lexical scope of `newRoll`? 
+Answer: function scope because it is within the scope of the nested function 
 
 ### Task 2c - Exit Ticket
 
