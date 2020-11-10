@@ -27,12 +27,13 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   
   Study the code for counter1 and counter2, then answer the questions below.
   
-  1. What is the difference between counter1 and counter2?
+  1. What is the difference between counter1 and counter2? Answer: counter 1 uses lexical scope and has closure , Counter 2 uses a global variable as its counter 
+
   
-  2. Which of the two uses a closure? How can you tell?
+  2. Which of the two uses a closure? How can you tell? Answer: counter 1 uses lexical scope and has closure
   
   3. In what scenario would the counter1 code be preferable? In what scenario would 
-     counter2 be better?  
+     counter2 be better?  Answer Counter # 1 is almost always preferable way to code because the  counter will reset to 0 everrytime the function is called. When you want the variable to be accessable to other functions
 */
 
 // counter1 code
@@ -61,14 +62,15 @@ Use the inning function below to do the following:
   For example: invoking inning() should return a numerical score value of 0, 1, or 2
 */
 
-function inning(/*Code Here*/){
-
+function inScore(){
     /*Code Here*/
-
-}
+    let newScore = Math.floor(Math.random() * 3);
+    return ;
+} 
+console.log("Score during Inning" + inScore);
 
 /* Task 3: finalScore()
-Use the finalScore function below to do the following:
+Use the finalScore function below to do the following::
   1. Receive the callback function `inning` that was created in Task 2 
   2. Receive a number of innings to be played
   3. After each inning, update the score of the home and away teams
