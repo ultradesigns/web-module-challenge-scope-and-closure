@@ -218,18 +218,18 @@ Use the scoreboard function below to do the following:
 
 
 
-/* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
+/* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 *///
 function foo(){
   console.log('its working');
   return 'bar';
 }
-// export default{
-//   foo,
-//   processFirstItem,
-//   counter1,
-//   counter2,
-//   inning,
-//   finalScore,
-//   getInningScore,
-//   scoreboard,
-// }
+export default{
+  foo,
+  processFirstItem,
+  counter1,
+  counter2,
+  inning,
+  finalScore,
+  getInningScore,
+  scoreboard,
+}
