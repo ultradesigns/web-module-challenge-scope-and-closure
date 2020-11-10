@@ -163,14 +163,58 @@ Use the scoreboard function below to do the following:
 ]  
   */
 
+// I need to rewrite this using an Array not an object
+// function scoreboard(inScoreCB, inningCB, times) {
+//   let final = {
+//       'Home': 0,
+//       'Away': 0,
+//     }
 
-function scoreboard(getInningScore, inning, times){
-  let finally = [];
-  for(let i = 0; i < times; i++){
+//   let strings=[];//emtpy
+//     for (let i = 1; i <= times; i++) {
+//         final.Home += inningCB(inScoreCB);
+//         final.Away += inningCB(inScoreCB);
+//         // console.log(`Inning ${[i]}: Away ${final.Home} - Home${final.Away}`);
+//         strings.push(`Inning ${[i]}: Away ${final.Home} - Home${final.Away}`);//This doesn't push to Array???
+//         // console.log(strings);
+//         return strings[i];
+//     }
+//       if (final.Home === final.Away) {
+//           return `This game will require extra innings:
+//           ${final.Home}-${final.Away}`
+//       } else {
+//           return `Final Score:
+//           ${final.Home}-${final.Away}`
+//       }
+      
+//     }
+//     console.log(scoreboard(getInningScore, inning, 9))
+
+    function scoreboard(inScoreCB, inningCB, times) {
+      let final = {
+          'Home': 0,
+          'Away': 0,
+        }
     
-  } 
-}
-
+      // let strings=[];//emtpy
+        for (let i = 1; i <= times; i++) {
+            final.Home += inningCB(inScoreCB);
+            final.Away += inningCB(inScoreCB);
+            console.log(`...Inning ${[i]}: Away ${final.Home} - Home${final.Away}`);
+            // strings.push(`Inning ${[i]}: Away ${final.Home} - Home${final.Away}`);//This doesn't push to Array???
+            // console.log(strings);
+        }
+          if (final.Home === final.Away) {
+              return `This game will require extra innings:
+              ${final.Home}-${final.Away}`
+          } else {
+              return `Final Score:
+              ${final.Home}-${final.Away}`
+          }
+          
+        }
+        
+        console.log(scoreboard(getInningScore, inning, 9))
 
 
 
