@@ -64,10 +64,10 @@ Use the inning function below to do the following:
 
 function inning(){
     /*Code Here*/
-    let newScore = Math.floor(Math.random() * 3);
+    let newScore = Math.floor(Math.random() * 3); 
     return newScore;
 } 
-console.log("Score during Inning" + inning);
+console.log("Score during Inning" +" "+ inning());
 
 /* Task 3: finalScore()
 Use the finalScore function below to do the following::
@@ -85,15 +85,15 @@ For example: invoking finalScore(inning, 9) might return this object:
 
 
 
-function finalScore(reUse, amount){
+function finalScore(callback, amount){
   let update={
     "Home": 0,
     "Away": 0
     }
 
     for(let i = 0; i <= amount; i++){
-      update.Home += reUse;
-      update.Away += reUse;
+      update.Home += callback();
+      update.Away += callback();
     }
     return update;
 }
@@ -105,9 +105,21 @@ console.log(finalScore(inning, 9));
 // the function should take the inning function as an argument 
 // it should return an object with with a score for home and a score for away that that populates from invoking the inning callback. */
 
-function getInningScore(/*Your Code Here */) {
-  /*Your Code Here */
+function getInningScore(fetch) {
+    /*Your Code Here */
+    return  {
+    "Home": fetch(),
+    "Away": fetch()
+    }   
 }
+console.log(getInningScore(inning));
+
+
+  
+  
+
+
+
 /* Task 5: scoreboard()
 Use the scoreboard function below to do the following:
   1. Receive a callback function, that you create, called `getInningScore`
@@ -135,7 +147,7 @@ Use the scoreboard function below to do the following:
   "Inning 9: Away 13 - Home 11", 
   "Final Score: Away 13 - Home 11"  
 ]  
-  If there is a tie, invoking scoreboard(getInningScore,inning, 9) might return 
+  If there is a tie, invoking scoreboard(getInningScore,inning, played) might return 
   an array of strings like this:
 [
   "Inning 1: Away 1 - Home 2", 
@@ -152,8 +164,11 @@ Use the scoreboard function below to do the following:
   */
 
 
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
+function scoreboard(getInningScore, inning, times){
+  let finally = [];
+  for(let i = 0; i < times; i++){
+    
+  } 
 }
 
 
